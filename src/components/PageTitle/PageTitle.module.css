@@ -1,0 +1,9 @@
+.pageTitle {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.pageTitle span {
+    font-weight: 300;
+    color: #9B9B9B;
+}
