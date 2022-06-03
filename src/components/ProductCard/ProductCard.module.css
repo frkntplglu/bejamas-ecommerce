@@ -1,0 +1,43 @@
+.productCard {}
+
+.productCard_image {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.productCard_bestSeller {
+    background: #fff;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 29px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.productCard_addToCart {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    font-size: 23px;
+    font-weight: 500;
+    height: 46px;
+    width: 100%;
+    border: none;
+}
+.productCard_category {
+    font-size: 22px;
+    font-weight: 600;
+    color: #656565;
+}
+.productCard_name {
+    font-size: 34px;
+    font-weight: 600;
+}
+.productCard_price {
+    font-size: 29px;
+    color: #656565;
+}
