@@ -1,4 +1,6 @@
-.productCard {}
+.productCard {
+    width: calc(33.3333% - 45px);
+}
 
 .productCard_image {
     position: relative;
