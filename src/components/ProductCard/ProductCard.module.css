@@ -1,5 +1,6 @@
 .productCard {
     width: calc(33.3333% - 45px);
+    margin-bottom: 50px;
 }
 
 .productCard_image {
@@ -34,10 +35,12 @@
     font-size: 22px;
     font-weight: 600;
     color: #656565;
+    margin-top: 4px;
 }
 .productCard_name {
     font-size: 34px;
     font-weight: 600;
+    margin: 8px 0;
 }
 .productCard_price {
     font-size: 29px;

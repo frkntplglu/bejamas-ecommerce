@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Filter from '../src/components/Filter'
+import FilterContainer from '../src/components/FilterContainer'
 import ProductCard from '../src/components/ProductCard'
 import ProductList from '../src/components/ProductList'
 import ProductListHeader from '../src/components/ProductListHeader'
+import { categoryFilter, priceFilter } from '../src/utils/filter'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -14,6 +17,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ProductListHeader />
+      <FilterContainer>
+        <Filter title="Category" options={categoryFilter} />
+        <Filter title="Price range" options={priceFilter} />
+      </FilterContainer>
       <ProductList />
     </div>
   )

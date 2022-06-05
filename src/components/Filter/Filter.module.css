@@ -1,0 +1,48 @@
+.filter {
+    border-bottom: 1px solid #C2C2C2;
+    max-width: 268px;
+    margin-bottom: 30px;
+}
+.filterTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.filterList {
+    font-size: 20px;
+    list-style: none;
+}
+
+.filterList li{
+    margin-bottom: 40px;
+}
+
+.filterList li input {
+    display: none;
+}
+
+.filterList li label {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.filterList li label:before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    border: 2px solid #000;
+    display: block;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.filterList li input:checked + label:after {
+    content: "";
+    background: url("/images/check.svg") no-repeat center center;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+}
