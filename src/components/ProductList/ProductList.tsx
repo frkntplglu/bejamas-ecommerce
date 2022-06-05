@@ -1,4 +1,5 @@
 import React from 'react'
+import Pagination from '../Pagination'
 import ProductCard from '../ProductCard'
 import styles from "./ProductList.module.css"
 
@@ -23,6 +24,7 @@ const ProductList = () => {
       />
             ))
         }
+        <Pagination pageNumber={4} activePage={2} />
     </section>
   )
 }

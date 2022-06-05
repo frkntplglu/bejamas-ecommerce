@@ -1,0 +1,15 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.pagination button {
+    background: none;
+    appearance: none;
+    border: none;
+    width: 27px;
+    height: 27px;
+    display: block;
+    font-size: 29px;
+    font-weight: 600;
+}
