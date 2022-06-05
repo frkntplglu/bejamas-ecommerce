@@ -1,0 +1,8 @@
+.homepageContainer {
+
+}
+
+.homepageProductsContainer {
+    display: flex;
+    justify-content: space-between;
+}

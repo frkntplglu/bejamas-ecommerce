@@ -1,4 +1,6 @@
 .layout {
     padding-left: 92px;
     padding-right: 92px;
+    max-width: 1290px;
+    margin: 0 auto;
 }

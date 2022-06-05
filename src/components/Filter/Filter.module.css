@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .filterList li label:before {

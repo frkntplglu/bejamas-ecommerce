@@ -4,9 +4,9 @@ import styles from "./ProductListHeader.module.css"
 
 const ProductListHeader = () => {
   return (
-    <div className={styles.productListHeader}>
+    <section className={styles.productListHeader}>
       <PageTitle mainTitle="Photography" subTitle='Premium Photos' />
-    </div>
+    </section>
   )
 }
 

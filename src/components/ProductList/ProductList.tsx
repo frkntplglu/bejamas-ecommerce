@@ -4,7 +4,7 @@ import styles from "./ProductList.module.css"
 
 const ProductList = () => {
   return (
-    <div className={styles.productList}>
+    <section className={styles.productList}>
         {
             Array(6).fill(0).map(item => (
                 <ProductCard 
@@ -23,7 +23,7 @@ const ProductList = () => {
       />
             ))
         }
-    </div>
+    </section>
   )
 }
 

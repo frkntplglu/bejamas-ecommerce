@@ -4,4 +4,6 @@
     align-items: center;
     height: 120px;
     border-bottom: 4px solid #E4E4E4;
+    max-width: 1290px;
+    margin: 0 auto;
 }
