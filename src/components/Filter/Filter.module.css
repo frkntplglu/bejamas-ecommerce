@@ -3,6 +3,9 @@
     max-width: 268px;
     margin-bottom: 30px;
 }
+.filter:last-child {
+    border: none;
+}
 .filterTitle {
     font-size: 22px;
     font-weight: 700;

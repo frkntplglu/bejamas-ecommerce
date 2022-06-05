@@ -1,0 +1,110 @@
+.featuredProduct{
+    border-bottom: 4px solid #E4E4E4;
+    padding-bottom: 65px;
+}
+
+.featuredProductHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 26px;
+}
+
+.featuredProductTitle{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.featuredProductAddToCart{
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    font-size: 23px;
+    font-weight: 500;
+    height: 46px;
+    border: none;
+    width: 100%;
+    max-width: 257px;
+}
+
+.featuredProductImage{
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.featuredProductImageBadge{
+    background: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    height: 67px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.featuredProductContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.featuredProductDescription{
+    max-width: 690px;
+}
+
+.featuredProductDescription p{
+    font-size: 18px;
+    line-height: 150%;
+    color: #656565;
+    margin-bottom: 25px;
+}
+
+.featuredProductContentTitle{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.featuredProductContentTitleSecondary{
+    color: #656565;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.featuredProductDetails{
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.featuredProductRecommended{
+    list-style: none;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.featuredProductRecommended li{
+    background: red;
+    width: 117px;
+    height: 147px;
+    position: relative;
+}
+
+.featuredProductRecommended li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.featuredProductExifInfo{
+    list-style: none;
+    font-size: 18px;
+    line-height: 150%;
+    color: #656565;
+}
