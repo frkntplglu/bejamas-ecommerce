@@ -7,3 +7,9 @@
     font-weight: 300;
     color: #9B9B9B;
 }
+
+@media screen and (max-width: 1024px) {
+    .pageTitle {
+        font-size: 18px;
+    }
+}

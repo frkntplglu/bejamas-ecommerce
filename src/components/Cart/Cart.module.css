@@ -1,9 +1,85 @@
 .cart {
-    
+    position: relative;
 }
 
 .cartButton {
     background: none;
     appearance: none;
     border: none;
+    position: relative;
+}
+
+.cartBadge {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+}
+
+.cartItems {
+    border: 4px solid #E4E4E4;
+    padding: 24px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    min-width: 250px;
+}
+
+.cartItems li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    border-bottom: 1px solid #C2C2C2;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.cartItems li h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.cartItems li p{
+    font-size: 29px;
+    color: #656565;
+}
+
+.cartItems li span{
+    width: 149px !important;
+    height: 86px !important;
+    display: block;
+    margin-left: 20px !important;
+}
+
+.cartItems li span img{
+    object-fit: cover;
+}
+
+.cartItems button {
+    background: none;
+    appearance: none;
+    border: 3px solid #000000;
+    height: 55px;
+    font-size: 23px;
+    font-weight: 500;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .cartButton img{
+        width: 32px !important;
+        height: 32px !important;
+    }
 }

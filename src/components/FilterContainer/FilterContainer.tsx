@@ -8,7 +8,9 @@ interface IFilterContainerProps {
 const FilterContainer = (props: IFilterContainerProps) => {
     const { children } = props;
   return (
-    <aside className={styles.filterContainer}>{children}</aside>
+    <aside className={styles.filterContainer}>
+      {children}
+    </aside>
   )
 }
 

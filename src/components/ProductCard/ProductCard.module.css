@@ -3,6 +3,10 @@
     margin-bottom: 50px;
 }
 
+.productCard:not(:nth-child(3n)) {
+    margin-right: 45px;
+}
+
 .productCard_image {
     position: relative;
     padding: 0;
@@ -35,7 +39,7 @@
     font-size: 22px;
     font-weight: 700;
     color: #656565;
-    margin-top: 4px;
+    margin-top: 7px;
 }
 .productCard_name {
     font-size: 34px;
@@ -45,4 +49,17 @@
 .productCard_price {
     font-size: 29px;
     color: #656565;
+}
+
+@media screen and (max-width: 1024px) {
+    .productCard {
+        width: calc(50% - 15px);
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .productCard {
+        width: 100%;
+    }
 }

@@ -1,30 +1,29 @@
-import React from 'react'
-import Pagination from '../Pagination'
+import React, { useEffect, useState } from 'react'
 import ProductCard from '../ProductCard'
 import styles from "./ProductList.module.css"
 
-const ProductList = () => {
+const ProductList = ({products}: any) => {
+  
   return (
     <section className={styles.productList}>
         {
-            Array(6).fill(0).map(item => (
+            products?.map((item: any) => (
                 <ProductCard 
-                key="xd"
-        name="Red Bench"
-        category="people"
-        price={3.89}
-        currency="USD"
+                key={item.name}
+        name={item.name}
+        category={item.category}
+        price={item.price}
+        currency={item.currency}
         image={{
-          src: "",
-          alt: "Red Bench"
+          src: item.image.src ?? item.image,
+          alt:  item.name
         }}
-        bestseller
-        featured={false}
-        details={null}
+        bestseller={item.bestseller}
+        featured={item.featured}
+        details={item.detail}
       />
             ))
         }
-        <Pagination pageNumber={4} activePage={2} />
     </section>
   )
 }

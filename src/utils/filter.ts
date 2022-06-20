@@ -39,23 +39,23 @@ const categoryFilter = [
 const priceFilter = [
     {
         id: 1,
-        title: "Lower than $20",
-        key: "0"
+        key: "lower20",
+        title: "Lower than $20"
     },
     {
         id: 2,
-        title: "$20 - $100",
-        key: "20"
+        key: "20to100",
+        title: "$20 - $100"
     },
     {
         id: 3,
-        title: "$100 - $200",
-        key: "100"
+        key: "101to200",
+        title: "$100 - $200"
     },
     {
         id: 4,
-        title: "More than $200",
-        key: "200"
+        key: "greater200",
+        title: "More than $200"
     },
 ]
 

@@ -3,6 +3,7 @@
     max-width: 268px;
     margin-bottom: 30px;
 }
+
 .filter:last-child {
     border: none;
 }
@@ -49,4 +50,10 @@
     height: 23px;
     position: absolute;
     left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .filterTitle {
+        font-size: 34px;
+    }
 }

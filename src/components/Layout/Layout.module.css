@@ -4,3 +4,10 @@
     max-width: 1290px;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 1024px) {
+    .layout {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

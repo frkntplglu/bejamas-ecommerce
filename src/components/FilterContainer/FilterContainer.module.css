@@ -2,3 +2,9 @@
     width: 268px;
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 1024px) {
+    .filterContainer {
+        display: none;
+    }
+}

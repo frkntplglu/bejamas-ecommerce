@@ -1,36 +1,53 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import styles from "./FeaturedProduct.module.css"
+import { notifyCart, warnCart } from '../../utils/cartNotifications'
+import CartContext from '../../context/cartContext'
 
-const FeaturedProduct = () => {
+const FeaturedProduct = (props: any) => {
+    const {productData} = props
+    const {cart, setCart, setCartOpen} = useContext(CartContext);
+  const addToCart = ({name, price, image}: any) => {
+    const currentCart = [...cart];
+    if(!currentCart.some((item: any) => item.name === name)) {
+      currentCart.push({name, price, image})
+      setCart(currentCart);
+      setCartOpen(true);
+      notifyCart();
+    } else {
+      warnCart();
+    }
+    
+  }
+    if(!productData) return null
   return (
     <section className={styles.featuredProduct}>
         <div className={styles.featuredProductHeader}>
-            <h1 className={styles.featuredProductTitle}>Samurai King Resting</h1>
-            <button className={styles.featuredProductAddToCart}>ADD TO CART</button>
+            <h1 className={styles.featuredProductTitle}>{productData.name}</h1>
+            <button className={styles.featuredProductAddToCart} onClick={() => addToCart({name: productData.name, price: productData.price, image: productData.image})}>ADD TO CART</button>
         </div>
         <figure className={styles.featuredProductImage}>
-            <Image src="/images/featured.jpg" alt="Samurai King Resting" layout="responsive" width={1290} height={553} />
+            <Image src={productData.image.src} alt={productData.image.alt} layout="responsive" width={1290} height={553} />
             <div className={styles.featuredProductImageBadge}>Photo of the day</div>
         </figure>
         <div className={styles.featuredProductContent}>
             <article className={styles.featuredProductDescription}>
-                <div className={styles.featuredProductContentTitle}>About the Samurai King Resting</div>
-                <div className={styles.featuredProductContentTitleSecondary}>Pets</div>
-                <p>So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder </p>
-                <p>text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock.</p>
+                <div className={styles.featuredProductContentTitle}>About the {productData.name}</div>
+                <div className={styles.featuredProductContentTitleSecondary}>{productData.category}</div>
+                
+                <p>{productData.details.description}</p>
             </article>
             <div className={styles.featuredProductDetails}>
                 <div className={styles.featuredProductContentTitle}>People also buy</div>
                 <ul className={styles.featuredProductRecommended}>
-                    <li><Image src="/images/recommend1.jpg" alt="recommend1" layout="fill" width={117} height={147} /></li>
-                    <li><Image src="/images/recommend2.jpg" alt="recommend1" layout="fill" width={117} height={147} /></li>
-                    <li><Image src="/images/recommend3.jpg" alt="recommend1" layout="fill" width={117} height={147} /></li>
+                    {productData.details.recommendations.map((item: any) => {
+                        return (<li key={item.src}><Image src={item.src} alt="recommend1" width={117} height={147} /></li>)
+                    })}
                 </ul>
                 <div className={styles.featuredProductContentTitle}>People also buy</div>
                 <ul className={styles.featuredProductExifInfo}>
-                    <li>Size: 1020 x 1020 pixel</li>
-                    <li>Size: 15 mb</li>
+                    <li>Size: {productData.details.dimmentions.width} x {productData.details.dimmentions.height} pixel</li>
+                    <li>Size: {productData.details.size / 1000} mb</li>
                 </ul>
             </div>
         </div>

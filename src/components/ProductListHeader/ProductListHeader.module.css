@@ -1,4 +1,25 @@
 .productListHeader {
     margin-top: 75px;
     margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filterMobileButton {
+    background: none;
+    appearance: none;
+    border: none;
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .productListHeader {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .filterMobileButton {
+        display: block;
+    }
+    
 }
