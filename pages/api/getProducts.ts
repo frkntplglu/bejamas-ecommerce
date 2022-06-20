@@ -10,6 +10,6 @@ export default async (req:any, res:any) => {
         q.Lambda((show) => q.Get(show))
       )
     );
-    res.status(200).json({ data: query.data });
+    res.status(200).json(query);
   }
 };

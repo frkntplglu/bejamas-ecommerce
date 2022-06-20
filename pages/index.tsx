@@ -72,7 +72,7 @@ const Home: NextPage = () => {
     fetch('/api/getProducts')
     .then(response => response.json())
     .then(({data}) => {
-      console.log("data : ", )
+      console.log("data : ", data)
       setProducts(data.map((item: any) => item.data))
     })
     .catch(err => {
