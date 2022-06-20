@@ -12,6 +12,27 @@
     display: none;
 }
 
+.sortingWrapper {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    color: #9B9B9B;
+}
+
+.sortingBtn {
+    background: none;
+    appearance: none;
+    border: none;
+    width: 42px;
+    height: 42px;
+}
+.sortingSelect {
+    font-size: 22px;
+    border: none;
+    width: 150px;
+    margin-left: 10px;
+}
+
 
 @media screen and (max-width: 1024px) {
     .productListHeader {

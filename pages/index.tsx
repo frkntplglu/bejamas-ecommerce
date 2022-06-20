@@ -51,6 +51,8 @@ const Home: NextPage = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [selectedPrice, setSelectedPrice] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
+  const [sortingType, setSortingType] = useState<string>("price");
+  const [sortingAlignment, setSortingAlignment] = useState<string>("asc");
 
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
@@ -105,6 +107,20 @@ const Home: NextPage = () => {
     return filterForPrice(products, selectedPrice)
   }
 
+  const getSortedProducts = () => {
+    if(sortingType === "price") {
+      if(sortingAlignment === "asc") {
+        return getFilteredProducts().sort((a: any,b: any) => a.price - b.price)
+      }
+      return getFilteredProducts().sort((a: any,b: any) => b.price - a.price)
+    } else if(sortingType === "alphabetical") {
+      if(sortingAlignment === "asc") {
+        return getFilteredProducts().sort((a: any,b: any) => a.name.localeCompare(b.name))
+      }
+      return getFilteredProducts().sort((a: any,b: any) => b.name.localeCompare(a.name))
+    }
+  }
+
   const featuredProduct = products.filter(item => item.featured)
 
   return (
@@ -115,7 +131,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FeaturedProduct productData={featuredProduct[0]} />
-      <ProductListHeader filterMobileButton={{isFilterModalOpen: modalIsOpen, setIsFilterModalOpen: openModal}} />
+      <ProductListHeader 
+        filterMobileButton={{isFilterModalOpen: modalIsOpen, setIsFilterModalOpen: openModal}} 
+        sortingType={{sortingType, setSortingType}}
+        sortingAlignment={{sortingAlignment, setSortingAlignment}}
+      />
       <div className={styles.homepageProductsContainer}>
         {
           width && width > 1024 ? 
@@ -143,7 +163,7 @@ const Home: NextPage = () => {
           </Modal>
         }
 
-        <ProductList products={getFilteredProducts()} />
+        <ProductList products={getSortedProducts()} />
       </div>
     </section>
   )
