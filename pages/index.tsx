@@ -72,7 +72,6 @@ const Home: NextPage = () => {
     fetch('/api/getProducts')
     .then(response => response.json())
     .then(({data}) => {
-      console.log("data : ", data)
       setProducts(data.map((item: any) => item.data))
     })
     .catch(err => {
@@ -83,13 +82,8 @@ const Home: NextPage = () => {
 
 
   const handlePrice = (event: any) => {
-    const checkedList = [...selectedPrice];
-    if(event.target.checked) {
-      checkedList.push(event.target.value)
-    } else {
-      const targetIndex = selectedPrice.indexOf(event.target.value);
-      checkedList.splice(targetIndex, 1); 
-    }
+    const checkedList = [];
+    checkedList.push(event.target.value)
     setSelectedPrice(checkedList);
   }
 
